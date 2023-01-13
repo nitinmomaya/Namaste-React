@@ -19,4 +19,4 @@
     headingj.innerHTML="Namaste Nitin from JavaScript!!";
 
     const rootj=document.getElementById('jroot');
-    jroot.appendChild(headingj);
+    rootj.appendChild(headingj);
