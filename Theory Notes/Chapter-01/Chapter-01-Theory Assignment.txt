@@ -1,0 +1,52 @@
+Q1. What is Emmet?
+
+->Emmet uses different abbreviations and short expressions depending on what's passed, and 
+  then dynamically converts the abbreviations into the full code. 
+  Emmet is mostly used for HTML, XML, and CSS, but it can also be used with programming languages
+
+
+Q2. Difference Between Framework and Library?
+
+-> Library provides reuseable function for our code.
+   Framework provides ready to use tools, standard template and rules for fast app development
+
+   Framework helps to develop app quickly
+   library helps to reuse software as a function
+
+
+Q3.  What is CDN? Why do we use it?
+
+-> CDN is Content Delivery Network,The primary goal of a CDN is to improve web performance by reducing the time 
+   needed to send content and rich media to users
+
+Q4. Why is React known as React?
+
+-> React is called React because it was designed to be a declarative, efficient, and flexible JavaScript library 
+   for building user interfaces.
+
+   The name "React" was chosen because the library was designed to allow developers to "react" to changes in state and data 
+   within an application, and to update the user interface in a declarative and efficient manner
+
+Q5. What is crossorigin in script tag?
+
+-> The crossorigin attribute sets the mode of the request to an HTTP CORS(Cross-Origin Resource Sharing) Request.
+   Web pages often make requests to load resources on other servers. Here is where CORS comes in.
+   A cross-origin request is a request for a resource (e.g. style sheets, iframes, images, fonts, or scripts) from another domain.
+
+Q6. What is diference between React and ReactDOM?
+
+-> React library is responsible for creating views and ReactDOM library is responsible to actually render UI in the browser.
+
+Q7. What is difference between react.development.js and react.production.js files via CDN?
+
+-> react.development.js is meant for development because the assest and codes are not optimized
+   react.production,js mode minifies your code, optimises assets, and produces lighter weight source maps.
+
+Q8. What is async and defer?
+
+-> <script async src=""> using "async" keyword fetch the js files parallely but stop html parsing once js file available in browser
+   and ready to execute and html parsing starts again after js file are fully executed
+
+   <script defer src=""> using "defer" keyword fetch the js files parallely but html parsing are continued even if js file is
+   available to execute. it defer the js file execution till html parsing is done and once html parsing is completed js file are
+   executed
