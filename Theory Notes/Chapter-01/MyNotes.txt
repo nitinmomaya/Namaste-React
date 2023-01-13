@@ -1,0 +1,4 @@
+React is a global object
+we can create element with .createElement
+
+react element is an object
