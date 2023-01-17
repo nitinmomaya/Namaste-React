@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+//Code of 1st and 2nd class combined
+
 /**
  * PARCEL BENEFITS:-
  *
@@ -23,7 +25,7 @@ import ReactDOM from "react-dom/client";
 
 //  Below code shows how to write hello world program with React
 
-//{} --> is an object to pass content on specific id {id: "title"}
+//{} --> is an object to pass content on specific id also known as props{id: "title"}
 //React will override the content to previous content
 const heading = React.createElement("h1", {}, "Namaste Nitin from React");
 const root = ReactDOM.createRoot(document.getElementById("root"));

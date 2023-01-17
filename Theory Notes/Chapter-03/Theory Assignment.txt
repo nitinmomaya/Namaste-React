@@ -1,0 +1,25 @@
+Q1. What is JSX?
+-> It is a fancy way to write HTML in JavaScript. It is a HTML like syntax it is not HTML inside JavaScript
+
+Q2. superpowers of JSX?
+
+-> JSX makes it easier to write or add HTML in React.
+   JSX can easily convert HTML tags to react elements.
+   It is faster than regular JavaScript.
+
+Q3. Role of "Type" attribute in script tag? what options i can use there?
+
+-> he HTML <script> type Attribute is used to specify the MIME type of script and identify the content of the Tag. 
+   It has a Default value which is “text/javascript”.
+
+   MIME type:-A media type (also known as a Multipurpose Internet Mail Extensions or MIME type) indicates 
+   the nature and format of a document, file, or assortment of bytes
+
+   Common “media_type” values are: 
+
+    text/javascript (this is default)
+    text/ecmascript
+    application/ecmascript
+    application/javascript
+
+

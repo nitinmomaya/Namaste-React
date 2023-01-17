@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,500;0,700;1,400;1,600&display=swap");
+* {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 1.5rem;
+  align-items: center;
+
+  height: 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.right > ul {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.right > ul > li {
+  list-style: none;
+}
+
+.button {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: rgb(0, 102, 55);
+  color: white;
+}
+
+.searchbox > input {
+  width: 300px;
+  border: 1px solid #e0e0e0;
+  padding: 0.5rem;
+  border-radius: 6px;
+  height: 32px;
+}
