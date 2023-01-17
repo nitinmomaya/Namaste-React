@@ -1,0 +1,38 @@
+initialise the npm using npm init 
+
+npm uses to manage packages for our app
+react app powered by different package and those package comes under npm
+
+npm install -D parcel {-D means installing parcel for dev dependency}
+
+package-lock.json is an very important file lock the verision of the package to avoid production bugs and local machine bugs, never include
+package-lock.json under .gitignore file
+
+node_module is a database for npm
+
+node_module should always be a part of .gitignore file
+
+<!-- NOT A GOOD WAY TO ADD REACT IN THE FILE, because whenever react is updated we have to keep changing the cdn links to use react
+        <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script> -->
+
+    Best way:  npm install react
+               npm install react-dom/ install and i is same
+
+     to start app syntax: npx parcel entrypoint-filename
+
+     npx means npm gets executed          
+
+     never touch node_module,package.json
+
+     module can import and export
+
+     parcel is a bundlers
+
+     Transitive dependency- dependency has other dependency
