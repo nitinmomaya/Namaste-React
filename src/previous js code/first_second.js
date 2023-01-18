@@ -35,8 +35,8 @@ root.render(heading);
 
 //Below code show how to write hello world program with JS
 
-const headingj = document.createElement("h1");
-headingj.innerHTML = "Namaste Nitin from JavaScript!!";
+// const headingj = document.createElement("h1");
+// headingj.innerHTML = "Namaste Nitin from JavaScript!!";
 
-const rootj = document.getElementById("jroot");
-rootj.appendChild(headingj);
+// const rootj = document.getElementById("jroot");
+// rootj.appendChild(headingj);

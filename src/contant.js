@@ -1,8 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+//Config and Contant file are same
+// we store hard-coded data here
+
+export const IMG_CDN_URL =
+  "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
 
 //config driven UI
-const restDetails = [
+export const restDetails = [
   {
     type: "restaurant",
     data: {
@@ -733,70 +736,3 @@ const restDetails = [
     subtype: "basic",
   },
 ];
-
-// navbar
-
-const Navbar = () => (
-  <div className="container">
-    <div className="left">FoodWallah</div>
-
-    <div className="searchbox">
-      <input
-        type="text"
-        placeholder="Search any food and restaurant..."
-      ></input>
-    </div>
-    <div className="right">
-      <ul>
-        <li>Home</li>
-        <li>Restaurants</li>
-        <li>Cart</li>
-        <button className="button">Sign In</button>
-      </ul>
-    </div>
-  </div>
-);
-
-const Restcard = ({
-  name,
-  cloudinaryImageId,
-  cuisines,
-  lastMileTravelString,
-}) => {
-  return (
-    <div className="card">
-      <img
-        className="image"
-        src={
-          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
-          cloudinaryImageId
-        }
-      />
-      <div className="content">
-        <h2> {name}</h2>
-        <h3>{cuisines.join(", ")}</h3>
-        <h4>{lastMileTravelString} </h4>
-      </div>
-    </div>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(
-  <>
-    <Navbar />
-
-    <div className="card-list">
-      {/* <Restcard {...restDetails[0].data} />
-      <Restcard {...restDetails[1].data} />
-      <Restcard {...restDetails[2].data} />
-      <Restcard {...restDetails[3].data} />
-      <Restcard {...restDetails[4].data} />
-      <Restcard {...restDetails[5].data} /> */}
-      {restDetails.map((resDetail) => {
-        return <Restcard {...resDetail.data} key={resDetail.data.id} />;
-      })}
-    </div>
-  </>
-);

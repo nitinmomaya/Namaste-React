@@ -1,0 +1,28 @@
+Q1. What is the difference between Named Export Default Export and * as Export?
+
+-> Named export:- With named exports, one can have multiple named exports per file. Then import the specific exports 
+   they want surrounded in braces.The name of imported module has to be the same as the name of the exported module.
+   import { MyComponent } from "./MyComponent";
+
+    Default Export:- One can have only one default export per file. The naming of import is completely independent in default export 
+    and we can use any name we like. When we import we have to specify a name and import like:
+    // import
+    import MyDefaultComponent from "./MyDefaultExport";
+    // export
+    const MyComponent = () => {}
+    export default MyComponent;
+
+    * as export: we can export everything from a file using * as ex: import * as obj from "/MyComponent";
+
+Q2. Importance of config file?
+
+-> config file and contants file are same, helps to manage hardcoded data and helps to use and update across the project
+
+Q3. What are React Hooks?
+
+-> React hooks are basically function which are made purposely to execute some specific task based on arugment and attribute
+
+Q4. Why do we need a useState Hook?
+
+-> The React useState Hook allows us to track state in a function component.State generally refers to data or properties that need to be 
+   tracking in an application.
