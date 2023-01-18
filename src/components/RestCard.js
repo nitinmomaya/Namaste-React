@@ -6,7 +6,6 @@ const Restcard = ({
   cuisines,
   lastMileTravelString,
 }) => {
-  console.log("RENDERED FROM [RestCard.js]");
   return (
     <div className="card">
       <img className="image" src={IMG_CDN_URL + cloudinaryImageId} />
