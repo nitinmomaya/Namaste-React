@@ -1,8 +1,6 @@
-import Navbar from "./src/components/Navbar";
-
 import React from "react";
 import ReactDOM from "react-dom/client";
-
+import Navbar from "./src/components/Navbar";
 import CardList from "./src/components/CardList";
 
 const AppLayout = () => {
