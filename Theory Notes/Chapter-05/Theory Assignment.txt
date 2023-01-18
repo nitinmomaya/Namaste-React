@@ -1,10 +1,10 @@
 Q1. What is the difference between Named Export Default Export and * as Export?
 
--> Named export:- With named exports, one can have multiple named exports per file. Then import the specific exports 
+-> 1. Named export:- With named exports, one can have multiple named exports per file. Then import the specific exports 
    they want surrounded in braces.The name of imported module has to be the same as the name of the exported module.
    import { MyComponent } from "./MyComponent";
 
-    Default Export:- One can have only one default export per file. The naming of import is completely independent in default export 
+    2. Default Export:- One can have only one default export per file. The naming of import is completely independent in default export 
     and we can use any name we like. When we import we have to specify a name and import like:
     // import
     import MyDefaultComponent from "./MyDefaultExport";
@@ -12,7 +12,7 @@ Q1. What is the difference between Named Export Default Export and * as Export?
     const MyComponent = () => {}
     export default MyComponent;
 
-    * as export: we can export everything from a file using * as ex: import * as obj from "/MyComponent";
+    3. * as export: we can export everything from a file using * as ex: import * as obj from "/MyComponent";
 
 Q2. Importance of config file?
 
