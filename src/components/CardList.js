@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Restcard from "./RestCard";
-import { restDetails } from "../contant";
+
+import Shimmer from "./Shimmer";
 
 function filterData(searchInput, restaurants) {
   const filterData = restaurants.filter((restaurant) =>
-    restaurant.data.name.includes(searchInput)
+    restaurant.data.name.toLowerCase().includes(searchInput.toLowerCase())
   );
 
   return filterData;
@@ -12,9 +13,26 @@ function filterData(searchInput, restaurants) {
 
 const CardList = () => {
   const [searchInput, setSearchInput] = useState("");
-  const [restaurants, setRestaurants] = useState(restDetails);
+  const [filterRestaurants, setFilteredRestaurants] = useState([]);
+  const [allRestaurant, setAllRestaurant] = useState([]);
 
-  return (
+  useEffect(() => {
+    getRestaurants();
+  }, []);
+
+  async function getRestaurants() {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.2513844&lng=81.62964130000002&page_type=DESKTOP_WEB_LISTING"
+    );
+    const json = await data.json();
+    setAllRestaurant(json?.data?.cards[2]?.data?.data?.cards);
+    setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    console.log(json);
+  }
+
+  return filterRestaurants.length === 0 ? (
+    <Shimmer />
+  ) : (
     <>
       <div className="searchbox">
         <input
@@ -26,11 +44,12 @@ const CardList = () => {
           }}
         ></input>
         <button
+          className="button"
           onClick={() => {
             //need to filter data
-            const data = filterData(searchInput, restaurants);
+            const data = filterData(searchInput, allRestaurant);
             //update state-restaurants
-            setRestaurants(data);
+            setFilteredRestaurants(data);
             setSearchInput("");
           }}
         >
@@ -39,7 +58,7 @@ const CardList = () => {
       </div>
 
       <div className="card-list">
-        {restaurants.map((resDetail) => {
+        {filterRestaurants.map((resDetail) => {
           return <Restcard {...resDetail.data} key={resDetail.data.id} />;
         })}
       </div>
