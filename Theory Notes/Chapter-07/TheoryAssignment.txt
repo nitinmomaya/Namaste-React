@@ -1,0 +1,37 @@
+1. What are the various way to add images into our App?Expalin with code examples?
+
+-> 1. This can be accomplished with an image hosting service, an FTP service or a blog-hosting service
+
+   2.  Copy and paste your image URL into an IMG tag, add a SRC to it
+       <img src=”(your image URL here)”>
+
+   3.  put an image into a directory in HTML, If you have a website and you’re trying to insert an image into a directory,
+        the process is relatively straightforward. Here’s how it’s done in three easy steps:
+
+        Copy the URL of the image you wish to insert.
+        Next, open your index.html file and insert it into the img code. Example: <img src=”(your image URL here)”>
+        Save the HTML file. The next time you open it, you’ll see the webpage with your newly added image.
+
+    4. Link an image in HTML
+
+       Now to change the attributes, you’ll need to know the following. First, the title attribute is title =”(your title)”. 
+       Next, set your alt attribute, which explains the image in detail. Finally, set the height and width of your image. 
+       Use the code <img src=”(your title)” alt=”Image” height=”(your image height)” width=”(your image width)”>.    
+
+2. What would happen if we do console.log(useState())?
+
+-> whenever the state change it print the console log of useState which return 2 thing undefined and a function
+   
+
+3. How will useEffect behave if we don't add a dependency array?
+
+-> it will re-render on every state change of the component
+
+4. What is SPA?
+
+-> Single Page Application where routing between pages work without reloading the whole app and routes using react-route-dom
+
+5. what is difference between Client Side Routing and Server Slide Routing?
+
+-> with server-side routing you download an entire new webpage whenever you click on a link, 
+   with client-side routing the webapp downloads, processes and displays new data for you.

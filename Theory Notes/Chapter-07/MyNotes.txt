@@ -1,0 +1,29 @@
+Never create a functional component inside functional component
+never ever write useState under if-else and as well as for-loop 
+
+react give useState to create localstate variable inside your functional component
+never use useState outside functional component
+
+We can multiple useEffect
+avoid un-neccessary packages 
+
+<--------Router------>
+
+createBrowserRouter this is a function which we get from react-router dom it will help us creating routing
+always appRouter below the AppLayout because it will not render because it work in sequence
+
+there is a component called "RouterProvider" which is exported from react-router-dom 
+
+ to create nested route we will sue Outlet
+ all the children will go in the Outlet according to the route
+we can create multiple children
+
+html doesn't know Outlet--> Outlet got filled with what we put react-dom take care of it
+read about object.values()
+
+2 types of routing- client and server side routing
+
+anchor tag reload the whole page that why we use Link from react-router-dom
+
+useParams--> is a hook
+path: "/restaurant/:id", without":" it won't work

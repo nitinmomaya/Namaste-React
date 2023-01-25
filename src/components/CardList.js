@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Restcard from "./RestCard";
 
 import Shimmer from "./Shimmer";
@@ -59,7 +60,14 @@ const CardList = () => {
 
       <div className="card-list">
         {filterRestaurants.map((resDetail) => {
-          return <Restcard {...resDetail.data} key={resDetail.data.id} />;
+          return (
+            <Link
+              to={"/restaurant/" + resDetail.data.id}
+              key={resDetail.data.id}
+            >
+              <Restcard {...resDetail.data} />
+            </Link>
+          );
         })}
       </div>
     </>

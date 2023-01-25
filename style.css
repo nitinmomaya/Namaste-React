@@ -18,12 +18,19 @@
 
 .right > ul {
   display: flex;
+  list-style: none;
+  text-decoration: none;
   gap: 24px;
   align-items: center;
+}
+.right {
+  list-style: none;
+  text-decoration: none;
 }
 
 .right > ul > li {
   list-style: none;
+  text-decoration: none;
 }
 
 .button {
