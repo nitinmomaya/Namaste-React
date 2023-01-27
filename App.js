@@ -9,6 +9,8 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import About from "./src/components/About";
 import Error from "./src/components/Error";
 import Restaurant from "./src/components/Restaurant";
+import ProfileClass from "./src/components/ProfileClass";
+import Class from "./src/components/Class";
 
 const AppLayout = () => {
   console.log("RENDERED FROM [App.js]");
@@ -30,15 +32,29 @@ const appRouter = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+        // children: [
+        //   {
+        //     path: "profile",
+        //     element: <ProfileClass />,
+        //   },
+        // ],
       },
+
       {
         path: "/",
         element: <CardList />,
       },
+
+      {
+        path: "/about/profile",
+        element: <ProfileClass />,
+      },
+
       {
         path: "/restaurant/:id",
         element: <Restaurant />,
       },
+
       //we have to define home page as well under children
     ],
   },

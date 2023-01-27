@@ -1,0 +1,13 @@
+we cannot a class based components without a render method
+constructor are used for initialisation
+we do not mutate state directly
+
+constructor--> Render--> ComponentDidMount
+
+ComponentDidMount is a best place to call API because we need to render the components first then update the components
+
+Mounting has 2 phase
+    - Render phase- constructor-Render
+    - Commit phase-ComponentDidMount
+
+Read about:- createHashRouter, createMemoryRouter from react-router docs

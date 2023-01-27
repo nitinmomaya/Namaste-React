@@ -15,6 +15,9 @@ const Navbar = () => {
           <Link to="/about">
             <li>About</li>
           </Link>
+          <Link to="/profile">
+            <li>Class Component</li>
+          </Link>
           <li>Cart</li>
           <button className="button" type="submit">
             Sign In

@@ -1,0 +1,38 @@
+1. How do you create Nested Routes react-router-dom configuration?
+
+->  {
+    path: "/",
+    element: <AppLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/about",
+        element: <About />,
+      },
+      children: [
+      {
+        path: "profile",
+        element: <ProfileClass />,
+      },
+      ]
+
+      ]
+
+2. What is the order of life cycle methods in class based component?
+
+-> constructor-> render-> mounting-> updating-> unmounting
+
+3. Why do we use ComponentDidMount?
+
+-> The componentDidMount() method allows us to execute the React code when the component is already placed in the DOM (Document Object Model). 
+   This method is called during the Mounting phase of the React Life-cycle i.e after the component is rendered
+
+4. Why do we use super(props) in constructor?
+
+-> props. In React, the constructor is called during component creation and before mounting. If you want to implement the constructor for a React 
+   component, call the super(props) method before any other statement.Otherwise, this. props will be undefined in the constructor and create bugs   
+
+5. Why can't we have the callback function of useEffect async?
+
+-> Because React's useEffect hook expects a cleanup function returned from it which is called when the component unmounts. 
+   Using an async function here will cause a bug as the cleanup function will never get called
