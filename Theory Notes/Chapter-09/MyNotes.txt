@@ -1,0 +1,20 @@
+We should create a utlis which keeps all the utlity at one place which help us to use same logic all over the components
+
+It help us to make our code more readable, modular ,reusable ,maintainble and testable
+
+modularity:- breakdown code into meaningful pieces
+
+it is always a good practice to clear eventlistner
+
+Chunking
+Code Splitting
+Dynamic Bundling
+Lazy Loading
+On Demand Loading
+Dynamic import
+
+when we are loading components in Demand React try to suspend it
+
+under fallback we can write JSX(under Suspense)
+
+never try to Dynamic loac components inside other components

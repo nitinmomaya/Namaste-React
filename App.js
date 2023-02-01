@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import Navbar from "./src/components/Navbar";
 import CardList from "./src/components/CardList";
@@ -10,7 +10,12 @@ import About from "./src/components/About";
 import Error from "./src/components/Error";
 import Restaurant from "./src/components/Restaurant";
 import ProfileClass from "./src/components/ProfileClass";
-import Class from "./src/components/Class";
+import Shimmer from "./src/components/Shimmer";
+
+// import Instamart from "./src/components/Instamart";
+// we do a lazy loading for instamart below
+
+const Instamart = lazy(() => import("./src/components/Instamart"));
 
 const AppLayout = () => {
   console.log("RENDERED FROM [App.js]");
@@ -49,10 +54,23 @@ const appRouter = createBrowserRouter([
         path: "/about/profile",
         element: <ProfileClass />,
       },
+      {
+        path: "/profile",
+        element: <ProfileClass />,
+      },
 
       {
         path: "/restaurant/:id",
         element: <Restaurant />,
+      },
+
+      {
+        path: "/instamart",
+        element: (
+          <Suspense fallback={<Shimmer />}>
+            <Instamart />
+          </Suspense>
+        ),
       },
 
       //we have to define home page as well under children

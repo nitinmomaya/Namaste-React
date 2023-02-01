@@ -1,0 +1,45 @@
+1. When and why do we need lazy()?
+
+-> When our app are huge and have huge number of components, then to make size of bundler small and keep our app
+   performance fast, we use lazy() to create more than one bundler for our diffrent components or we can say it perform 
+   code-split.
+
+2. What is suspense?
+
+-> While using lazy loading on components our react fails to render the components on first click, this happen as our
+   new bundler still have not fetched that component javascript file. So, to overcome this we use suspense while providing the components 
+   into render function. By doing this react suspend the render until the bundler fetch that jasvascript file.
+
+   Syntax <Suspense><About /></Suspense>
+
+3.  Why we got this error : A component suspended while responding to synchronous input. This will cause thr UI to be replaced with a loading indicator.
+    TO fix, updates that suspend should be wrapped with startTransition ? How does suspense fix this error ?
+
+-> The core of this is just having a component suspend without a suspense boundary:
+
+   Adding startTransition in cases where it makes sense seems to be a nice-to-have addition after a suspense boundary is in place, in that it will delay 
+   the transition until the suspending component is ready. However a) this doesn't seem to be the primary problem - that's the lack of suspense boundary,
+   b) the suspense boundary is much easier to add and more general, and c) it seems like it may not always be possible to use a transition.
+   For example where the problem occurs on first load as in the minimal example, or in my react-router case where we can benefit from 
+   using startTransition in some places, but it's difficult to make sure any possible navigation route is done as a transition,
+   and missing any out will lead to an error unless we also add a suspense boundary.
+
+   So my feeling is that if the error message also suggested adding a suspense boundary, it would reinforce good practice, 
+   and in my case would also have got me much more quickly to the real issue of a misplaced component. 
+
+
+4. Advantage and disadvantage of using this code splitting pattern?
+
+->  Advantage: 
+    > Performamnce of app increases.
+    > Readablity of app increases.
+    > Easier to maintain app.
+
+    Disadvantage:
+    > Development cost increases.
+    > Loading time increases.   
+
+5. When do we and why do we need suspense ?
+
+-> React.Suspense lets you specify the loading indicator in case some components in the tree below it are not yet ready to render.
+   In the future we plan to let Suspense handle more scenarios such as data fetching.    
